@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Harga Paket IdPlay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #e5e7eb;
+      }
+      .a4-container {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 20px auto;
+        background-color: #f8fafc; /* bg-slate-50 */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* Latar belakang dengan pola garis melengkung (wave) dari CSS */
+        background-image: radial-gradient(
+            circle at top left,
+            transparent 25%,
+            #e0f2fe 25.5%,
+            #e0f2fe 36%,
+            transparent 36.5%,
+            transparent 100%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            transparent 34%,
+            #e0f2fe 34.5%,
+            #e0f2fe 45.5%,
+            transparent 46%,
+            transparent 100%
+          );
+        background-size: 6em 6em;
+        background-color: #f8fafc;
+        opacity: 1;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+        padding: 15mm;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #2563eb, #0ea5e9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      .price-card {
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(4px);
+        border: 1px solid #e5e7eb;
+        transition: all 0.3s ease;
+      }
+      .price-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .best-seller-badge {
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        background: linear-gradient(135deg, #fbbf24, #f59e0b);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        transform: rotate(15deg);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      @media print {
+        body {
+          background-color: white;
+        }
+        .a4-container {
+          width: 100%;
+          min-height: auto;
+          margin: 0;
+          box-shadow: none;
+          background-image: none; /* Sembunyikan background saat print */
+          background-color: white;
+        }
+        .content-wrapper {
+          padding: 10mm;
+          background-color: white;
+          backdrop-filter: none;
+        }
+        .price-card {
+          background-color: #ffffff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a4-container">
+      <div class="content-wrapper">
+        <!-- Header -->
+        <header class="text-center mb-6">
+          <h1 class="text-4xl font-extrabold gradient-text">
+            Daftar Harga Paket IDPlay
+          </h1>
+          <p class="mt-2 text-lg text-gray-600">
+            Berlaku untuk Area Bandung & Sekitarnya
+          </p>
+        </header>
+
+        <main class="flex-grow">
+          <!-- Promo Banner -->
+          <section
+            class="mb-6 bg-yellow-400 text-center p-4 rounded-lg shadow-md"
+          >
+            <h3 class="font-extrabold text-xl text-white drop-shadow-md">
+              PROMO SPESIAL!
+            </h3>
+            <p class="font-semibold text-sm text-gray-800">
+              GRATIS BIAYA INSTALASI (Hemat Rp 500.000)
+            </p>
+          </section>
+
+          <!-- Daftar Harga -->
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <!-- Paket 20 Mbps -->
+            <div
+              class="price-card p-4 rounded-lg flex flex-col border-t-4 border-blue-500"
+            >
+              <div class="text-center mb-3">
+                <p class="text-3xl font-bold text-blue-600">
+                  20 <span class="text-lg">Mbps</span>
+                </p>
+                <p class="text-xs text-gray-500">Browsing & Sosmed</p>
+              </div>
+              <div class="border-t border-gray-200 pt-2 space-y-2">
+                <div>
+                  <strong>Bulanan:</strong>
+                  <span class="float-right font-semibold">Rp 198.690</span>
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>6 Bulan (5+1):</strong>
+                  <span class="float-right font-semibold">Rp 993.450</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 198.690)</span
+                  >
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>12 Bulan (10+2):</strong>
+                  <span class="float-right font-semibold">Rp 1.986.900</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 397.380)</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Paket 30 Mbps -->
+            <div
+              class="price-card p-4 rounded-lg flex flex-col border-t-4 border-blue-500"
+            >
+              <div class="text-center mb-3">
+                <p class="text-3xl font-bold text-blue-600">
+                  30 <span class="text-lg">Mbps</span>
+                </p>
+                <p class="text-xs text-gray-500">Streaming & WFH</p>
+              </div>
+              <div class="border-t border-gray-200 pt-2 space-y-2">
+                <div>
+                  <strong>Bulanan:</strong>
+                  <span class="float-right font-semibold">Rp 265.290</span>
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>6 Bulan (5+1):</strong>
+                  <span class="float-right font-semibold">Rp 1.326.450</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 265.290)</span
+                  >
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>12 Bulan (10+2):</strong>
+                  <span class="float-right font-semibold">Rp 2.652.900</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 530.580)</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Paket 50 Mbps -->
+            <div
+              class="price-card p-4 rounded-lg flex flex-col border-t-4 border-blue-500"
+            >
+              <div class="text-center mb-3">
+                <p class="text-3xl font-bold text-blue-600">
+                  50 <span class="text-lg">Mbps</span>
+                </p>
+                <p class="text-xs text-gray-500">Gaming & Download</p>
+              </div>
+              <div class="border-t border-gray-200 pt-2 space-y-2">
+                <div>
+                  <strong>Bulanan:</strong>
+                  <span class="float-right font-semibold">Rp 309.690</span>
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>6 Bulan (5+1):</strong>
+                  <span class="float-right font-semibold">Rp 1.548.450</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 309.690)</span
+                  >
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>12 Bulan (10+2):</strong>
+                  <span class="float-right font-semibold">Rp 3.096.900</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 619.380)</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Paket 75 Mbps -->
+            <div
+              class="price-card p-4 rounded-lg flex flex-col relative border-t-4 border-yellow-400"
+            >
+              <div class="best-seller-badge">Paling Laris</div>
+              <div class="text-center mb-3">
+                <p class="text-3xl font-bold text-yellow-500">
+                  75 <span class="text-lg">Mbps</span>
+                </p>
+                <p class="text-xs text-gray-500">Streaming 4K</p>
+              </div>
+              <div class="border-t border-gray-200 pt-2 space-y-2">
+                <div>
+                  <strong>Bulanan:</strong>
+                  <span class="float-right font-semibold">Rp 331.890</span>
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>6 Bulan (5+1):</strong>
+                  <span class="float-right font-semibold">Rp 1.659.450</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 331.890)</span
+                  >
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>12 Bulan (10+2):</strong>
+                  <span class="float-right font-semibold">Rp 3.318.900</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 663.780)</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Paket 100 Mbps -->
+            <div
+              class="price-card p-4 rounded-lg flex flex-col border-t-4 border-blue-500"
+            >
+              <div class="text-center mb-3">
+                <p class="text-3xl font-bold text-blue-600">
+                  100 <span class="text-lg">Mbps</span>
+                </p>
+                <p class="text-xs text-gray-500">Keluarga Besar</p>
+              </div>
+              <div class="border-t border-gray-200 pt-2 space-y-2">
+                <div>
+                  <strong>Bulanan:</strong>
+                  <span class="float-right font-semibold">Rp 354.090</span>
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>6 Bulan (5+1):</strong>
+                  <span class="float-right font-semibold">Rp 1.770.450</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 354.090)</span
+                  >
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>12 Bulan (10+2):</strong>
+                  <span class="float-right font-semibold">Rp 3.540.900</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 708.180)</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Paket 200 Mbps -->
+            <div
+              class="price-card p-4 rounded-lg flex flex-col border-t-4 border-blue-500"
+            >
+              <div class="text-center mb-3">
+                <p class="text-3xl font-bold text-blue-600">
+                  200 <span class="text-lg">Mbps</span>
+                </p>
+                <p class="text-xs text-gray-500">Profesional & Heavy User</p>
+              </div>
+              <div class="border-t border-gray-200 pt-2 space-y-2">
+                <div>
+                  <strong>Bulanan:</strong>
+                  <span class="float-right font-semibold">Rp 409.590</span>
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>6 Bulan (5+1):</strong>
+                  <span class="float-right font-semibold">Rp 2.047.950</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 409.590)</span
+                  >
+                </div>
+                <div class="bg-green-50/70 p-2 rounded">
+                  <strong>12 Bulan (10+2):</strong>
+                  <span class="float-right font-semibold">Rp 4.095.900</span
+                  ><br /><span class="text-green-700 text-xs font-semibold"
+                    >(Hemat Rp 819.180)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-center text-gray-500 mt-4">
+            *Harga sudah termasuk PPN 11%. True Unlimited tanpa FUP.
+          </p>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-auto pt-6 text-center">
+          <div class="border-t pt-4">
+            <h3 class="text-lg font-bold text-gray-800">
+              Info & Pendaftaran Cepat:
+            </h3>
+            <p class="text-md text-gray-700">Hubungi Roy</p>
+            <p class="text-xl font-bold gradient-text">+62 878-4168-5302</p>
+            <p class="text-xs text-gray-500 mt-4">
+              Brosur ini dibuat oleh freelance sales marketing untuk tujuan
+              promosi. Website resmi:
+              <a
+                href="https://idplay.co.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+                >idplay.co.id</a
+              >
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

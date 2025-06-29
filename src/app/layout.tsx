@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IDPlay",
+  title: "Promo Spesial IdPlay - Internet Cepat & Unlimited",
   description:
-    "Solusi Internet Cepat, Stabil, dan Tanpa Batas untuk Semua Kebutuhan Anda.",
+    "Dapatkan promo internet IdPlay terbaik. Koneksi cepat 100% fiber optic, true unlimited tanpa FUP. Daftar sekarang gratis instalasi!",
 };
 
 export default function RootLayout({
